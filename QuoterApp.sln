@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoterApp", "QuoterApp\QuoterApp.csproj", "{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuoterApp", "QuoterApp\QuoterApp.csproj", "{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoterApp.Test", "QuoterApp.Test\QuoterApp.Test.csproj", "{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

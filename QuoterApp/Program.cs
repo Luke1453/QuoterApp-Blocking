@@ -1,21 +1,29 @@
-﻿using System;
+﻿using QuoterApp.Services;
+using System;
 
-namespace QuoterApp
+namespace QuoterApp;
+
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        try
         {
             var gq = new YourQuoter();
             var qty = 120;
+            var instrumentID = "DK50782120";
 
-            var quote = gq.GetQuote("DK50782120", qty);
-            var vwap = gq.GetVolumeWeightedAveragePrice("DK50782120");
+            var quote = gq.GetQuote(instrumentID, qty, false);
+            var vwap = gq.GetVolumeWeightedAveragePrice(instrumentID);
 
-            Console.WriteLine($"Quote: {quote}, {quote / (double)qty}");
-            Console.WriteLine($"Average Price: {vwap}");
+            Console.WriteLine($"Quote: {quote}\tAverage Quote Price: {quote / qty}");
+            Console.WriteLine($"Average Market Price: {vwap}");
             Console.WriteLine();
             Console.WriteLine($"Done");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message.ToString());
         }
     }
 }

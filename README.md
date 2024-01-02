@@ -24,4 +24,5 @@ There can be many market orders for the same instrumnet with different quantitie
 - Consider implementation of IMarketOrderSource where it would be giving orders as they are created troughout the day in an open market
 - For more advanced cases consider decoupling flow of getting orders from flow of getting quotes
 - You are welcome to add (or not) any test that you see fit
-- Can do partial or not partial filling
+
+can do partial fillieng and no
