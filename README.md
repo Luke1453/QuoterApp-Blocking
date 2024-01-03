@@ -1,4 +1,4 @@
-﻿Market Quoter Component
+﻿# Market Quoter Component
 
 Your task is to implement market quoter component defined in *IQuoter* interface.
 
@@ -7,22 +7,23 @@ You have two methods to implement in *YourQuoter.cs*:
   - Takes instrument and quantity to quote, returns best possible price with current quotes
 2. GetVolumeWeightedAveragePrice
   - Takes instrument id and calculates volume-weighted average price for the instrument
-  - More about: https://en.wikipedia.org/wiki/Volume-weighted_average_price
 
-*IMarketOrderSource.cs*
-You should depend on IMarketOrderSource interface as stand-in for market data feed. Keep in mind that IMarketOrderSource.GetNextMarketOrder() blocks your call until next order is available, source is potentially endless.
-You can use provided implementation of IQuoteSource as example or you can write your own.
-You should not change IMarketOrderSource.cs in a significant way
+## MarketOrderSource
 
-*MarketOrder.cs*
-Each individual market order is represented in MarketOrder class and has InstrumentId, Quantity at available at Price.
-There can be many market orders for the same instrumnet with different quantities and different prices.
+**It's a naive approach**
+As I was allowed to change *MarkedOrderSource* so I made it return null if no more market orders are left.
 
-*Implementation Notes*
-- Given implementation HardcodedQuoteSource of IMarketOrderSource simulated situation where there is limited number of orders available
-- You are welcome to make your own implementation of IMarketOrderSource interface
-- Consider implementation of IMarketOrderSource where it would be giving orders as they are created troughout the day in an open market
-- For more advanced cases consider decoupling flow of getting orders from flow of getting quotes
-- You are welcome to add (or not) any test that you see fit
+By doing this I was able to fetch all market orders and know when there is no more left, this made producing quotes very slow since I'm bloked waiting for all market orders.
 
-can do partial fillieng and no
+I was able to make it better by only fetching market orders once for Quoting and Volume Weighted Average Price calculation.
+
+## Testing 
+
+Used *NUnitTest* to write unit tests for *YourQuoter* class.  
+Into *YourQuoter* injected a new instance of *IMemoryCache* with predictable mocked values.  
+
+![](tests.png)
+
+## Implementation Notes
+Better implementation of this excercise can be found in [QuoterApp repository](https://github.com/Luke1453/QuoterApp)  
+

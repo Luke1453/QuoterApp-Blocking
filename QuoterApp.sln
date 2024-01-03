@@ -5,7 +5,13 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuoterApp", "QuoterApp\QuoterApp.csproj", "{D727C0D8-C0D4-4FF1-966E-4FB9171686E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoterApp.Test", "QuoterApp.Test\QuoterApp.Test.csproj", "{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuoterApp.Test", "QuoterApp.Test\QuoterApp.Test.csproj", "{553B1C5F-EE6F-4E80-81AD-E58FC56925AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61A965C7-26C1-4B76-9363-2B5C8F705E2F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		tests.png = tests.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
