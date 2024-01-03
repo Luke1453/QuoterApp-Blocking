@@ -85,6 +85,12 @@ namespace QuoterApp.Services
                 volume += quote.Quantity;
             });
 
+            // if volume = 0 -> avgProce = 0
+            if (volume == 0)
+            {
+                return 0.0;
+            }
+
             return avgPrice / volume;
         }
 
